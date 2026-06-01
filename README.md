@@ -83,6 +83,10 @@ pay cell — are detailed in [`docs/analysis.md#recommendations`](docs/analysis.
 by Dr. Rich Huebner & Dr. Carla Patalano (Kaggle). A single CSV,
 `HRDataset_v14.csv` — **~311 employees, 36 columns**, one row per employee.
 
+> The dataset is publicly available and uses **synthetic employee names** —
+> any individuals named in this README or `docs/analysis.md` are fictional and
+> do not refer to real people.
+
 The raw file is **not committed** (see `.gitignore`). Download it from Kaggle
 (a free account is required) and place it at:
 

@@ -5,7 +5,9 @@ the supporting numbers, the named case study, per-finding caveats, and
 recommendation rationale. Read the README first for the headline narrative.
 
 > The subject company is anonymised in the source dataset. This document refers
-> to it as **Company X**.
+> to it as **Company X**. The dataset uses **synthetic employee names** —
+> any individuals named in the case study below are fictional and do not refer
+> to real people.
 
 ## 1. The headcount decline is a hiring freeze, not a workforce reduction
 
