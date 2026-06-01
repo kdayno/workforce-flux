@@ -1,0 +1,9 @@
+# Pass this directory to dbt with --profiles-dir .  (or set DBT_PROFILES_DIR).
+# The DuckDB file is created at the repo root so Evidence can also reach it.
+hr_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../hr.duckdb'
+      threads: 4

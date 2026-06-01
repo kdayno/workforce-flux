@@ -1,0 +1,35 @@
+name: 'hr_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'hr_analytics'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+vars:
+  # Anchor date for all "as of" calculations (age, tenure, current headcount).
+  # The dataset is a 2018-2019 snapshot, so "today" is frozen here rather than
+  # using current_date -- otherwise results would drift on every run.
+  analysis_date: '2019-01-01'
+
+  # Location of the raw Kaggle CSV, relative to where dbt is run (hr_dbt/).
+  raw_data_path: '../data/raw'
+
+models:
+  hr_analytics:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
