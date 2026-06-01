@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: dim_employee
+    description: >
+      One row per employee, enriched with derived analytical attributes (age,
+      tenure, banded categories, voluntary/involuntary termination type). The
+      core dimension the cross-sectional marts build on.
+    columns:
+      - name: emp_id
+        description: Unique employee identifier (primary key).
+        data_tests:
+          - unique
+          - not_null
+
+  - name: mart_headcount_monthly
+    description: >
+      Reconstructed monthly time series. For each month: active headcount,
+      hires, terminations, net change, and a trailing-12-month turnover rate --
+      all derived from employee hire and termination dates.
+    columns:
+      - name: month_start
+        description: First day of the calendar month (grain of the table).
+        data_tests:
+          - unique
+          - not_null
+      - name: active_headcount
+        description: Employees on payroll as of the month-end.
+        data_tests:
+          - not_null
+      - name: rolling_12m_turnover_rate
+        description: >
+          Trailing-12-month separations divided by average headcount over the
+          same window. The correct annualised turnover metric.
+
+  - name: mart_attrition
+    description: >
+      Department-level separation summary. NOTE: lifetime_separation_rate is a
+      cumulative figure across the company's whole history, not an annual
+      turnover rate -- see README caveats.
+    columns:
+      - name: department
+        data_tests:
+          - unique
+          - not_null
+
+  - name: mart_recruitment_effectiveness
+    description: >
+      Recruitment-source comparison across retention, tenure, engagement and
+      performance. Read total_hires alongside every rate -- per-source samples
+      are small.
+    columns:
+      - name: recruitment_source
+        data_tests:
+          - unique
+          - not_null
