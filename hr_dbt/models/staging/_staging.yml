@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_employees
+    description: >
+      Cleaned, type-cast, one-row-per-employee staging model built from the raw
+      Kaggle CSV. Column names are snake_cased, whitespace trimmed, and 0/1
+      flags converted to booleans.
+    columns:
+      - name: emp_id
+        description: Unique employee identifier (primary key).
+        data_tests:
+          - unique
+          - not_null
+      - name: is_terminated
+        description: True if the employee has left the company.
+        data_tests:
+          - not_null
+      - name: sex
+        description: Employee sex as recorded in the source.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['M', 'F']
+              config:
+                severity: warn
+      - name: performance_score
+        description: Categorical performance rating.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Exceeds', 'Fully Meets', 'Needs Improvement', 'PIP']
+              config:
+                severity: warn
