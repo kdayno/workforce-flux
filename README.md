@@ -33,7 +33,7 @@ People analytics on a Human Resources dataset
 
 ### 1. The headcount decline is a hiring freeze, not a workforce reduction
 
-- Headcount peaked at **229** in mid-2015, declined to **207** by end-2018
+- Headcount peaked at **246** in mid-2015, declined to **207** by end-2018
 - Annual terminations *fell* from 23 (2015) to 8–13 (2017–2018); ~76% are voluntary
 - Annual turnover **3.6–9.9%** — low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm)
 - Mechanism: hiring stopped, not terminations spiked

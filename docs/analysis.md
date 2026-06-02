@@ -11,7 +11,7 @@ recommendation rationale. Read the README first for the headline narrative.
 
 ## 1. The headcount decline is a hiring freeze, not a workforce reduction
 
-Headcount peaked at 229 employees in mid-2015 and declined to 207 by the end of
+Headcount peaked at 246 employees in mid-2015 and declined to 207 by the end of
 2018. The mechanism is neither layoffs nor an attrition spike: annual terminations
 *fell* from 23 (2015) to 8–13 (2017–2018), and ~76% of terminations are voluntary.
 Annual turnover peaked at 9.9% (2016), bottomed at 3.6% (2017), and finished at

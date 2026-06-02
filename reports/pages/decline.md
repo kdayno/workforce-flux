@@ -4,7 +4,7 @@ description: Company X's headcount decline is driven by hires falling, not termi
 sidebar_position: 1
 ---
 
-Headcount peaked at 229 in mid-2015 and declined to 207 by end-2018. The
+Headcount peaked at 246 in mid-2015 and declined to 207 by end-2018. The
 mechanism is neither layoffs nor an attrition spike: annual terminations
 *fell* from 23 (2015) to 8–13 (2017–2018). Annual turnover (3.6–9.9%) sits low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm).
 
