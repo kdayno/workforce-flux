@@ -23,12 +23,12 @@ order by month_start
 />
 
 ```sql annual_flow_long
-select calendar_year, 'hires' as metric, sum(hires) as count
+select cast(calendar_year as varchar) as calendar_year, 'hires' as metric, sum(hires) as count
 from workforce_flux.mart_headcount_monthly
 where calendar_year between 2011 and 2018
 group by calendar_year
 union all
-select calendar_year, 'terminations' as metric, sum(terminations) as count
+select cast(calendar_year as varchar) as calendar_year, 'terminations' as metric, sum(terminations) as count
 from workforce_flux.mart_headcount_monthly
 where calendar_year between 2011 and 2018
 group by calendar_year
@@ -42,6 +42,8 @@ order by calendar_year, metric
     series=metric
     type=grouped
     title="Annual hires vs terminations"
+    xType=category
+    sort=false
 />
 
 ```sql turnover_trend
@@ -77,7 +79,7 @@ The data fits the third.
 
 ```sql term_split
 select
-    extract(year from date_of_termination) as year,
+    cast(extract(year from date_of_termination) as varchar) as year,
     termination_type,
     count(*) as terminations
 from workforce_flux.dim_employee
@@ -94,4 +96,6 @@ order by year, termination_type
     series=termination_type
     type=grouped
     title="Voluntary vs involuntary terminations (2014–2018)"
+    xType=category
+    sort=false
 />
