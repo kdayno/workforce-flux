@@ -105,7 +105,7 @@ workforce-flux/
 │   └── raw/                  # HRDataset_v14.csv goes here (not committed)
 ├── docs/
 │   └── analysis.md           # Full per-finding analysis (case study, tables, caveats)
-├── queries/                  # Exploratory SQL scripts (run against hr.duckdb)
+├── eda/                      # Exploratory data analysis (SQL, run against hr.duckdb)
 │   ├── 01_decline_diagnosis.sql
 │   ├── 02_retention.sql
 │   ├── 03_exit_reasons.sql
