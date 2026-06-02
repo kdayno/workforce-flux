@@ -1,6 +1,7 @@
 ---
 title: 4. Pay equity is healthy; raw gap is composition
 description: 2.1% raw gap → ~0% within position; the raw gap is representation, not unequal pay
+sidebar_position: 4
 ---
 
 The raw company-wide median pay gap is **2.1% in men's favour** — well below
@@ -42,6 +43,15 @@ where department = 'Production'
 group by position
 order by employees desc
 ```
+
+<BarChart
+    data={position_composition}
+    x=position
+    y={['male_n', 'female_n']}
+    type=stacked
+    swapXY=true
+    title="Production headcount by position and sex"
+/>
 
 <DataTable data={position_composition}>
     <Column id=position title="Position" />

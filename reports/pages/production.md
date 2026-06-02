@@ -1,9 +1,10 @@
 ---
-title: 2. Voluntary attrition concentrated in Production
+title: 2. Voluntary attrition concentrated in Production department
 description: 86% of voluntary departures come from one department
+sidebar_position: 2
 ---
 
-74 of 86 lifetime voluntary departures (86%) came from Production, which makes
+74 of 86 lifetime voluntary departures (86%) came from the Production department, which makes
 up 67% of headcount. Production's lifetime voluntary rate (35%) is 3–4× higher
 than IT/IS (10%) or Sales (10%).
 
@@ -27,7 +28,7 @@ order by voluntary_separations desc
     swapXY=true
 />
 
-<DataTable data={attrition_by_dept} rows=10>
+<DataTable data={attrition_by_dept}>
     <Column id=department />
     <Column id=total_employees title="Total ever" />
     <Column id=voluntary_separations title="Voluntary" />
@@ -64,6 +65,6 @@ order by total desc
 
 ## The engagement-survey blind spot
 
-Production's average engagement (4.13) is *higher* than Sales (3.82), which
+Production department's average engagement (4.13) is *higher* than Sales (3.82), which
 has none of these voluntary patterns. The engagement instrument is a known
 false negative for the dissatisfaction that drives Production exits.

@@ -1,6 +1,7 @@
 ---
 title: 3. Production has a structural pay-competitiveness gap
-description: Pay inverts with tenure, no merit premium, and leavers earned 12.7% less than stayers
+description: Pay inverts with tenure, no merit premium, and stayers earn 12.7% more than leavers
+sidebar_position: 3
 ---
 
 Three reinforcing patterns explain why Production loses people.
@@ -34,6 +35,9 @@ order by
     y=median_salary
     title="Production median salary by tenure band"
     yFmt=usd0
+    sort=false
+    yMin=50000
+    labels=true
 />
 
 ## No merit-pay structure
@@ -63,12 +67,15 @@ order by
     y=median_salary
     title="Production median salary by performance band"
     yFmt=usd0
+    sort=false
+    yMin=50000
+    labels=true
 />
 
-## Leavers earned less than stayers at the same tenure
+## Stayers earn more than leavers at the same tenure
 
-Production voluntary leavers earned 4% less than stayers at 2–5 years tenure
-and **12.7% less** at 5–10 years (n=20 leavers vs 72 stayers).
+Production stayers earn 4% more than voluntary leavers at 2–5 years tenure,
+and **12.7% more** at 5–10 years (n=72 stayers vs 20 leavers).
 
 ```sql stayers_vs_leavers
 select

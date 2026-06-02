@@ -1,12 +1,12 @@
 ---
 title: 1. Hiring freeze, not attrition crisis
 description: Company X's headcount decline is driven by hires falling, not terminations rising
+sidebar_position: 1
 ---
 
 Headcount peaked at 229 in mid-2015 and declined to 207 by end-2018. The
 mechanism is neither layoffs nor an attrition spike: annual terminations
-*fell* from 23 (2015) to 8–13 (2017–2018). Annual turnover (3.6–9.9%) sits
-below typical external benchmarks of 8–12% for stable industries.
+*fell* from 23 (2015) to 8–13 (2017–2018). Annual turnover (3.6–9.9%) sits low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm).
 
 ```sql monthly_headcount
 select month_start, active_headcount
@@ -21,18 +21,6 @@ order by month_start
     title="Active headcount over time"
     yAxisTitle="Employees"
 />
-
-```sql annual_flow
-select
-    calendar_year,
-    sum(hires) as hires,
-    sum(terminations) as terminations,
-    sum(hires) - sum(terminations) as net_change
-from workforce_flux.mart_headcount_monthly
-where calendar_year between 2011 and 2018
-group by calendar_year
-order by calendar_year
-```
 
 ```sql annual_flow_long
 select calendar_year, 'hires' as metric, sum(hires) as count
