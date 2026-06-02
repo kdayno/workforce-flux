@@ -22,9 +22,9 @@ People analytics on a Human Resources dataset
 
 | # | Finding | Headline number |
 |---|---|---|
-| 1 | Hiring freeze, not attrition crisis | Annual turnover 3.6–9.9% (below 8–12% benchmarks) |
+| 1 | Hiring freeze, not attrition crisis | Annual turnover 3.6–9.9% (low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm)) |
 | 2 | Voluntary attrition concentrated in Production | 86% of voluntary exits from 67% of headcount |
-| 3 | Production has a structural pay-competitiveness gap | Leavers earned 12.7% less than stayers at 5–10 yrs tenure |
+| 3 | Production has a structural pay-competitiveness gap | Stayers earn 12.7% more than leavers at 5–10 yrs tenure |
 | 4 | Pay equity is healthy; raw gap is composition | 2.1% raw gap → ~0% within position |
 
 > **Full analysis** — per-finding tables, the named case study, and caveats:
@@ -35,7 +35,7 @@ People analytics on a Human Resources dataset
 
 - Headcount peaked at **229** in mid-2015, declined to **207** by end-2018
 - Annual terminations *fell* from 23 (2015) to 8–13 (2017–2018); ~76% are voluntary
-- Annual turnover **3.6–9.9%** — below typical external benchmarks of 8–12% for stable industries
+- Annual turnover **3.6–9.9%** — low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm)
 - Mechanism: hiring stopped, not terminations spiked
 
 ### 2. Voluntary attrition is concentrated in Production
@@ -49,7 +49,7 @@ People analytics on a Human Resources dataset
 
 - **Pay inverts with tenure** — Production median by band: ~$64K (<2 yrs) → $59K (2–10 yrs) → $56K (10+ yrs)
 - **No merit-pay structure** — top performers earn only ~2% more than median performers at the median
-- **Leavers earned less than stayers** — 4% gap at 2–5 yrs tenure, **12.7% gap** at 5–10 yrs (n=20 leavers vs 72 stayers)
+- **Stayers earn more than leavers at the same tenure** — 4% gap at 2–5 yrs, **12.7% gap** at 5–10 yrs (n=72 stayers vs 20 leavers)
 - **Named case study** — Lindsay Lynch, top performer (engagement 5.0), salary $47,434 (bottom quartile of Production), left for "Another position"
 
 ### 4. Pay equity is healthy; the raw gap is composition
