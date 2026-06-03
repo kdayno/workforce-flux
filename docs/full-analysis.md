@@ -11,11 +11,11 @@ recommendation rationale. Read the README first for the headline narrative.
 
 ## 1. The headcount decline is a hiring freeze, not a workforce reduction
 
-Headcount peaked at 229 employees in mid-2015 and declined to 207 by the end of
+Headcount peaked at 246 employees in mid-2015 and declined to 207 by the end of
 2018. The mechanism is neither layoffs nor an attrition spike: annual terminations
 *fell* from 23 (2015) to 8–13 (2017–2018), and ~76% of terminations are voluntary.
 Annual turnover peaked at 9.9% (2016), bottomed at 3.6% (2017), and finished at
-6.1% (2018) — *below* typical external benchmarks of 8–12% for stable industries.
+6.1% (2018), low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm).
 Company X is not bleeding people. It has stopped hiring.
 
 | Year | Year-end headcount | Annual hires | Annual terminations | TTM turnover |
@@ -87,10 +87,10 @@ at the median. Performance is not financially rewarded:
 | Needs Improvement | 15 | $60,270 | +1.5% |
 | PIP | 8 | $56,324 | −5.1% |
 
-### Leavers earned less than stayers at the same tenure
+### Stayers earn more than leavers at the same tenure
 
-Production voluntary leavers earned 4% less than stayers at 2–5 years tenure,
-and **12.7% less** at 5–10 years tenure (n=20 leavers vs n=72 stayers —
+Production stayers earn 4% more than voluntary leavers at 2–5 years tenure,
+and **12.7% more** at 5–10 years tenure (n=72 stayers vs n=20 leavers —
 reasonable samples):
 
 | Tenure band | Status | N | Median |
