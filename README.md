@@ -1,7 +1,5 @@
-# Workforce Flux
+![Workforce Flux Header Image](./docs/workforce-flux-header.png) 
 
-
-People analytics on a Human Resources dataset
 - An end-to-end analysis of workforce data that turns a raw HR dataset into decision-useful insight on headcount trends, attrition, retention, and recruitment effectiveness 
 - The analysis is delivered through a modern, file-based analytics stack — DuckDB for storage, dbt for transformation, and Evidence for reporting.
 
