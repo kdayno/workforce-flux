@@ -28,7 +28,7 @@ People analytics on a Human Resources dataset
 | 4 | Pay equity is healthy; raw gap is composition | 2.1% raw gap → ~0% within position |
 
 > **Full analysis** — per-finding tables, the named case study, and caveats:
-> [`docs/analysis.md`](docs/analysis.md). The subject company is anonymised in
+> [`docs/full-analysis.md`](docs/full-analysis.md). The subject company is anonymised in
 > the source dataset; this README refers to it as **Company X**.
 
 ### 1. The headcount decline is a hiring freeze, not a workforce reduction
@@ -67,7 +67,7 @@ likely absorb a portion of the 17 "Another position" exits.
 
 Three supporting recommendations — engagement-survey replacement, a merit-pay
 premium for Production, and an investigation of the Production Manager 5–10 yr
-pay cell — are detailed in [`docs/analysis.md#recommendations`](docs/analysis.md#recommendations).
+pay cell — are detailed in [`docs/full-analysis.md#recommendations`](docs/full-analysis.md#recommendations).
 
 ## Tech stack
 
@@ -84,7 +84,7 @@ by Dr. Rich Huebner & Dr. Carla Patalano (Kaggle). A single CSV,
 `HRDataset_v14.csv` — **~311 employees, 36 columns**, one row per employee.
 
 > The dataset is publicly available and uses **synthetic employee names** —
-> any individuals named in this README or `docs/analysis.md` are fictional and
+> any individuals named in this README or `docs/full-analysis.md` are fictional and
 > do not refer to real people.
 
 The raw file is **not committed** (see `.gitignore`). Download it from Kaggle
@@ -104,7 +104,7 @@ workforce-flux/
 ├── data/
 │   └── raw/                  # HRDataset_v14.csv goes here (not committed)
 ├── docs/
-│   └── analysis.md           # Full per-finding analysis (case study, tables, caveats)
+│   └── full-analysis.md           # Full per-finding analysis (case study, tables, caveats)
 ├── eda/                      # Exploratory data analysis (SQL, run against hr.duckdb)
 │   ├── 01_decline_diagnosis.sql
 │   ├── 02_retention.sql
