@@ -1,7 +1,5 @@
-# Workforce Flux
+![Workforce Flux Header Image](./docs/workforce-flux-header.png) 
 
-
-People analytics on a Human Resources dataset
 - An end-to-end analysis of workforce data that turns a raw HR dataset into decision-useful insight on headcount trends, attrition, retention, and recruitment effectiveness 
 - The analysis is delivered through a modern, file-based analytics stack — DuckDB for storage, dbt for transformation, and Evidence for reporting.
 
@@ -22,20 +20,20 @@ People analytics on a Human Resources dataset
 
 | # | Finding | Headline number |
 |---|---|---|
-| 1 | Hiring freeze, not attrition crisis | Annual turnover 3.6–9.9% (below 8–12% benchmarks) |
+| 1 | Hiring freeze, not attrition crisis | Annual turnover 3.6–9.9% (low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm)) |
 | 2 | Voluntary attrition concentrated in Production | 86% of voluntary exits from 67% of headcount |
-| 3 | Production has a structural pay-competitiveness gap | Leavers earned 12.7% less than stayers at 5–10 yrs tenure |
+| 3 | Production has a structural pay-competitiveness gap | Stayers earn 12.7% more than leavers at 5–10 yrs tenure |
 | 4 | Pay equity is healthy; raw gap is composition | 2.1% raw gap → ~0% within position |
 
 > **Full analysis** — per-finding tables, the named case study, and caveats:
-> [`docs/analysis.md`](docs/analysis.md). The subject company is anonymised in
+> [`docs/full-analysis.md`](docs/full-analysis.md). The subject company is anonymised in
 > the source dataset; this README refers to it as **Company X**.
 
 ### 1. The headcount decline is a hiring freeze, not a workforce reduction
 
-- Headcount peaked at **229** in mid-2015, declined to **207** by end-2018
+- Headcount peaked at **246** in mid-2015, declined to **207** by end-2018
 - Annual terminations *fell* from 23 (2015) to 8–13 (2017–2018); ~76% are voluntary
-- Annual turnover **3.6–9.9%** — below typical external benchmarks of 8–12% for stable industries
+- Annual turnover **3.6–9.9%** — low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm)
 - Mechanism: hiring stopped, not terminations spiked
 
 ### 2. Voluntary attrition is concentrated in Production
@@ -49,7 +47,7 @@ People analytics on a Human Resources dataset
 
 - **Pay inverts with tenure** — Production median by band: ~$64K (<2 yrs) → $59K (2–10 yrs) → $56K (10+ yrs)
 - **No merit-pay structure** — top performers earn only ~2% more than median performers at the median
-- **Leavers earned less than stayers** — 4% gap at 2–5 yrs tenure, **12.7% gap** at 5–10 yrs (n=20 leavers vs 72 stayers)
+- **Stayers earn more than leavers at the same tenure** — 4% gap at 2–5 yrs, **12.7% gap** at 5–10 yrs (n=72 stayers vs 20 leavers)
 - **Named case study** — Lindsay Lynch, top performer (engagement 5.0), salary $47,434 (bottom quartile of Production), left for "Another position"
 
 ### 4. Pay equity is healthy; the raw gap is composition
@@ -67,7 +65,7 @@ likely absorb a portion of the 17 "Another position" exits.
 
 Three supporting recommendations — engagement-survey replacement, a merit-pay
 premium for Production, and an investigation of the Production Manager 5–10 yr
-pay cell — are detailed in [`docs/analysis.md#recommendations`](docs/analysis.md#recommendations).
+pay cell — are detailed in [`docs/full-analysis.md#recommendations`](docs/full-analysis.md#recommendations).
 
 ## Tech stack
 
@@ -84,7 +82,7 @@ by Dr. Rich Huebner & Dr. Carla Patalano (Kaggle). A single CSV,
 `HRDataset_v14.csv` — **~311 employees, 36 columns**, one row per employee.
 
 > The dataset is publicly available and uses **synthetic employee names** —
-> any individuals named in this README or `docs/analysis.md` are fictional and
+> any individuals named in this README or `docs/full-analysis.md` are fictional and
 > do not refer to real people.
 
 The raw file is **not committed** (see `.gitignore`). Download it from Kaggle
@@ -104,7 +102,7 @@ workforce-flux/
 ├── data/
 │   └── raw/                  # HRDataset_v14.csv goes here (not committed)
 ├── docs/
-│   └── analysis.md           # Full per-finding analysis (case study, tables, caveats)
+│   └── full-analysis.md           # Full per-finding analysis (case study, tables, caveats)
 ├── eda/                      # Exploratory data analysis (SQL, run against hr.duckdb)
 │   ├── 01_decline_diagnosis.sql
 │   ├── 02_retention.sql
