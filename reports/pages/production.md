@@ -4,9 +4,9 @@ description: 86% of voluntary departures come from one department
 sidebar_position: 2
 ---
 
-74 of 86 lifetime voluntary departures (86%) came from the Production department, which makes
-up 67% of headcount. Production's lifetime voluntary rate (35%) is 3–4× higher
-than IT/IS (10%) or Sales (10%).
+- 74 of 86 lifetime voluntary departures (86%) came from the Production department, which makes
+up 67% of headcount 
+- Production's lifetime voluntary rate (35%) is 3–4× higher than IT/IS (10%) or Sales (10%)
 
 ```sql attrition_by_dept
 select
@@ -39,8 +39,7 @@ order by voluntary_separations desc
 
 ## The signal at the reason level
 
-Every "unhappy" and every "more money" voluntary exit in the dataset is from
-Production — 14 of 14 and 11 of 11 respectively.
+Every employee who mentioned "unhappy" and "more money" as the reason for their voluntary exit is from the Production department — 14 of 14 and 11 of 11 respectively
 
 ```sql reason_by_dept
 select

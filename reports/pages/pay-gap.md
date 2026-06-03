@@ -74,8 +74,7 @@ order by
 
 ## Stayers earn more than leavers at the same tenure
 
-Production stayers earn 4% more than voluntary leavers at 2–5 years tenure,
-and **12.7% more** at 5–10 years (n=72 stayers vs 20 leavers).
+Production employees who stay earn 4% more than employees who voluntary leave at 2–5 years of tenure, and **12.7% more** at 5–10 years (n=72 stayers vs 20 leavers).
 
 ```sql stayers_vs_leavers
 select
@@ -110,7 +109,7 @@ order by
 
 ## Named case study
 
-The 6 lifetime top-performer (Exceeds) voluntary departures from Production.
+The 6 lifetime top-performers (*i.e. exceeding expectations in their performance review*) that were voluntary departures from the Production department.
 **Lindsay Lynch** — engagement 5.0, salary $47,434 (bottom quartile of
 Production) — is the showcase row. Top performer, not disengaged, not
 unhappy. She just got a better offer.

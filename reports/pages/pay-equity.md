@@ -4,8 +4,8 @@ description: 2.1% raw gap → ~0% within position; the raw gap is representation
 sidebar_position: 4
 ---
 
-The raw company-wide median pay gap is **2.1% in men's favour** — well below
-typical external benchmarks of 15–20% raw. Within Production controlled by
+The raw company-wide median pay gap is **2.1% in men's favour** which is well below
+typical external benchmarks of 15–20% raw. Within the Production department controlled by
 position and tenure, women earn the same as or slightly more than men at the
 Technician levels where 86% of Production sits.
 
@@ -88,5 +88,4 @@ order by position, tenure_band, sex
 </DataTable>
 
 The right framing splits the question into *equity within role* (healthy)
-and *representation across roles* (a small skew worth monitoring) —
-reporting the raw 2.1% gap alone would mislead in both directions.
+and *representation across roles* (a small skew worth monitoring). Reporting the raw 2.1% gap alone would mislead in both directions.

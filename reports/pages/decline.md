@@ -71,9 +71,9 @@ order by month_start
 Three hypotheses for the net-negative trend, distinguished by the
 voluntary/involuntary split:
 
-- **Layoffs** would show an involuntary spike
-- **Voluntary attrition surge** would show voluntary climb
-- **Hiring freeze** would show both flat or falling — net loss from hires falling faster
+1.  **Layoffs** would show an involuntary spike
+2. **Voluntary attrition surge** would show voluntary climb
+3. **Hiring freeze** would show both flat or falling — net loss from hires falling faster
 
 The data fits the third.
 
