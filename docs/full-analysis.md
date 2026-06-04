@@ -1,13 +1,11 @@
 # Workforce Flux — Full Analysis
 
 This document extends the Key Findings summary in [`README.md`](../README.md) with
-the supporting numbers, the named case study, per-finding caveats, and
+the supporting numbers, per-finding caveats, and
 recommendation rationale. Read the README first for the headline narrative.
 
 > The subject company is anonymised in the source dataset. This document refers
-> to it as **Company X**. The dataset uses **synthetic employee names** —
-> any individuals named in the case study below are fictional and do not refer
-> to real people.
+> to it as **Company X**.
 
 ## 1. The headcount decline is a hiring freeze, not a workforce reduction
 
@@ -29,7 +27,7 @@ Company X is not bleeding people. It has stopped hiring.
 *Caveat: The trailing-12-month turnover rate combines voluntary and involuntary
 terminations. Voluntary-only rates sit at roughly ¾ of the reported values.*
 
-## 2. Voluntary attrition is concentrated in Production
+## 2. Voluntary attrition concentrated in Production department
 
 Of 86 lifetime voluntary departures, **74 (86%) came from Production** — which
 makes up 67% of all employees ever hired. Production's lifetime voluntary rate
@@ -75,10 +73,13 @@ rate Company X must currently offer:
 | 5–10 years | 97 | $59,144 |
 | 10+ years | 2 | $55,996 |
 
-### No meaningful merit-pay structure
+### Pay and performance are essentially decoupled
 
-Within Production, top performers (Exceeds) earn ~2% more than median performers
-at the median. Performance is not financially rewarded:
+Within Production, performers who are "Exceeding Expectations" earn a median of
+$60,724 vs. $59,365 for those that "Fully Meet Expectations" — only a ~2% premium.
+Interestingly, those who "Need Improvement" earn a median of $60,270 — essentially
+the same as top performers, and *more* than those who "Fully Meet Expectations".
+Performance is not financially rewarded:
 
 | Performance | N | Median | Premium vs Fully Meets |
 |---|---|---|---|
@@ -99,27 +100,6 @@ reasonable samples):
 | 2–5 years | Still here | 51 | $60,627 |
 | 5–10 years | Voluntary leaver | 20 | $53,372 |
 | 5–10 years | Still here | 72 | $60,136 |
-
-### Named case study — the 6 lifetime regrettable Production departures
-
-The 6 voluntary departures of Production top performers (Exceeds) over the
-company's history:
-
-| Employee | Reason | Tenure | Hire yr | Salary | Engagement |
-|---|---|---|---|---|---|
-| Peters, Lauren | more money | 1 | 2011 | $57,954 | 4.2 |
-| Squatrito, Kristen | unhappy | 2 | 2013 | $62,425 | 4.1 |
-| **Lynch, Lindsay** | **Another position** | **4** | **2011** | **$47,434** | **5.0** |
-| Veera, Abdellah | maternity (DNR) | 3 | 2012 | $58,523 | 4.5 |
-| Winthrop, Jordan | retiring | 3 | 2013 | $70,507 | 5.0 |
-| Johnson, George | more money | 6 | 2011 | $46,837 | 4.7 |
-
-Of the 4 actionable cases (excluding life-stage exits), 3 cite pay or pay-implicating
-reasons. **The Lynch row is the single most decision-useful row in the analysis.**
-Engagement 5.0 (maximum), top performer, 4 years of tenure, salary in the bottom
-quartile of Production — Lynch wasn't disengaged or unhappy. She just got a
-better offer. The only difference between her and Winthrop (same engagement,
-$23K higher salary, stayed until retirement) was pay.
 
 *Caveat: Position-mix within Production is not fully controlled in the
 tenure-based comparisons. Position-level analysis would refine the magnitudes
@@ -160,7 +140,7 @@ The single highest-leverage intervention indicated by the analysis is a
 market-rate salary review for Production roles, particularly at 3+ years of
 tenure. This would directly address the 11 explicit "more money" voluntary
 exits, likely absorb a portion of the 17 "Another position" exits, and remove
-the structural mechanism behind the Lynch-type regrettable departures.
+the structural mechanism behind regrettable top-performer departures.
 
 *Grounded in Findings 2 and 3.*
 
@@ -172,11 +152,12 @@ the structural mechanism behind the Lynch-type regrettable departures.
   known false negative for the dissatisfaction that actually drives Production
   exits. A diagnostic scoped to Production-specific conditions (hours, role,
   supervisor) would surface what the survey misses. *Grounded in Finding 2.*
-- **Build a merit-pay premium for Production.** Top performers (Exceeds) earn
-  only ~2% more than median performers at the median — well below the level
-  needed to retain high performers against external offers. A meaningful
-  premium would compound with the market-rate adjustment to specifically
-  address regrettable attrition. *Grounded in Finding 3.*
+- **Build a merit-pay premium for Production.** Performers who are "Exceeding
+  Expectations" earn only a ~2% premium over those that "Fully Meet
+  Expectations" — well below the level needed to retain high performers
+  against external offers. A meaningful premium would compound with the
+  market-rate adjustment to specifically address regrettable attrition.
+  *Grounded in Finding 3.*
 - **Investigate the Production Manager 5–10 year pay cell from Finding 4.**
   Men in this cell earn 19% more than women on n=3 vs 4 — too small to call
   a finding, large enough to warrant a deliberate look. A targeted pull of

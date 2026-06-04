@@ -21,11 +21,11 @@
 | # | Finding | Headline number |
 |---|---|---|
 | 1 | Hiring freeze, not attrition crisis | Annual turnover 3.6–9.9% (low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm)) |
-| 2 | Voluntary attrition concentrated in Production | 86% of voluntary exits from 67% of headcount |
+| 2 | Voluntary attrition concentrated in Production department | 86% of voluntary exits from 67% of headcount |
 | 3 | Production has a structural pay-competitiveness gap | Stayers earn 12.7% more than leavers at 5–10 yrs tenure |
 | 4 | Pay equity is healthy; raw gap is composition | 2.1% raw gap → ~0% within position |
 
-> **Full analysis** — per-finding tables, the named case study, and caveats:
+> **Full analysis** — per-finding tables and caveats:
 > [`docs/full-analysis.md`](docs/full-analysis.md). The subject company is anonymised in
 > the source dataset; this README refers to it as **Company X**.
 
@@ -36,7 +36,7 @@
 - Annual turnover **3.6–9.9%** — low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm)
 - Mechanism: hiring stopped, not terminations spiked
 
-### 2. Voluntary attrition is concentrated in Production
+### 2. Voluntary attrition concentrated in Production department
 
 - **86% of lifetime voluntary departures** (74 of 86) came from Production, which is 67% of headcount
 - Production's lifetime voluntary rate (35%) is **3–4× higher** than IT/IS (10%) or Sales (10%)
@@ -46,9 +46,8 @@
 ### 3. Production has a structural pay-competitiveness gap
 
 - **Pay inverts with tenure** — Production median by band: ~$64K (<2 yrs) → $59K (2–10 yrs) → $56K (10+ yrs)
-- **No merit-pay structure** — top performers earn only ~2% more than median performers at the median
+- **Pay and performance are essentially decoupled** — performers who are "Exceeding Expectations" earn a median of ~$61K vs. ~$59K for those that "Fully Meet Expectations" (~2% premium); interestingly, those who "Need Improvement" earn ~$60K — *more* than those who "Fully Meet Expectations"
 - **Stayers earn more than leavers at the same tenure** — 4% gap at 2–5 yrs, **12.7% gap** at 5–10 yrs (n=72 stayers vs 20 leavers)
-- **Named case study** — Lindsay Lynch, top performer (engagement 5.0), salary $47,434 (bottom quartile of Production), left for "Another position"
 
 ### 4. Pay equity is healthy; the raw gap is composition
 
@@ -81,10 +80,6 @@ pay cell — are detailed in [`docs/full-analysis.md#recommendations`](docs/full
 by Dr. Rich Huebner & Dr. Carla Patalano (Kaggle). A single CSV,
 `HRDataset_v14.csv` — **~311 employees, 36 columns**, one row per employee.
 
-> The dataset is publicly available and uses **synthetic employee names** —
-> any individuals named in this README or `docs/full-analysis.md` are fictional and
-> do not refer to real people.
-
 The raw file is **not committed** (see `.gitignore`). Download it from Kaggle
 (a free account is required) and place it at:
 
@@ -102,7 +97,7 @@ workforce-flux/
 ├── data/
 │   └── raw/                  # HRDataset_v14.csv goes here (not committed)
 ├── docs/
-│   └── full-analysis.md           # Full per-finding analysis (case study, tables, caveats)
+│   └── full-analysis.md           # Full per-finding analysis (tables, caveats)
 ├── eda/                      # Exploratory data analysis (SQL, run against hr.duckdb)
 │   ├── 01_decline_diagnosis.sql
 │   ├── 02_retention.sql

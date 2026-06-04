@@ -1,0 +1,4 @@
+name: workforce_flux
+type: duckdb
+options:
+  filename: ../../../hr.duckdb
