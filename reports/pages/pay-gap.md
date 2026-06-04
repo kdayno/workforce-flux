@@ -106,36 +106,3 @@ order by
     <Column id=employees title="N" />
     <Column id=median_salary title="Median salary" fmt=usd0 />
 </DataTable>
-
-## Named case study
-
-The 6 lifetime top-performers (*i.e. exceeding expectations in their performance review*) that were voluntary departures from the Production department.
-**Lindsay Lynch** — engagement 5.0, salary $47,434 (bottom quartile of
-Production) — is the showcase row. Top performer, not disengaged, not
-unhappy. She just got a better offer.
-
-```sql exceeds_cases
-select
-    employee_name,
-    term_reason,
-    round(tenure_years, 1) as tenure_at_exit,
-    hire_year,
-    date_of_termination,
-    salary,
-    engagement_survey_score
-from workforce_flux.dim_employee
-where department = 'Production'
-  and performance_score = 'Exceeds'
-  and termination_type = 'Voluntary'
-order by date_of_termination
-```
-
-<DataTable data={exceeds_cases}>
-    <Column id=employee_name title="Employee" />
-    <Column id=term_reason title="Reason" />
-    <Column id=tenure_at_exit title="Tenure (yrs)" />
-    <Column id=hire_year title="Hire yr" />
-    <Column id=date_of_termination title="Term date" />
-    <Column id=salary fmt=usd0 />
-    <Column id=engagement_survey_score title="Engagement" fmt=num1 />
-</DataTable>

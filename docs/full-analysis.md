@@ -1,13 +1,11 @@
 # Workforce Flux — Full Analysis
 
 This document extends the Key Findings summary in [`README.md`](../README.md) with
-the supporting numbers, the named case study, per-finding caveats, and
+the supporting numbers, per-finding caveats, and
 recommendation rationale. Read the README first for the headline narrative.
 
 > The subject company is anonymised in the source dataset. This document refers
-> to it as **Company X**. The dataset uses **synthetic employee names** —
-> any individuals named in the case study below are fictional and do not refer
-> to real people.
+> to it as **Company X**.
 
 ## 1. The headcount decline is a hiring freeze, not a workforce reduction
 
@@ -100,27 +98,6 @@ reasonable samples):
 | 5–10 years | Voluntary leaver | 20 | $53,372 |
 | 5–10 years | Still here | 72 | $60,136 |
 
-### Named case study — the 6 lifetime regrettable Production departures
-
-The 6 voluntary departures of Production top performers (Exceeds) over the
-company's history:
-
-| Employee | Reason | Tenure | Hire yr | Salary | Engagement |
-|---|---|---|---|---|---|
-| Peters, Lauren | more money | 1 | 2011 | $57,954 | 4.2 |
-| Squatrito, Kristen | unhappy | 2 | 2013 | $62,425 | 4.1 |
-| **Lynch, Lindsay** | **Another position** | **4** | **2011** | **$47,434** | **5.0** |
-| Veera, Abdellah | maternity (DNR) | 3 | 2012 | $58,523 | 4.5 |
-| Winthrop, Jordan | retiring | 3 | 2013 | $70,507 | 5.0 |
-| Johnson, George | more money | 6 | 2011 | $46,837 | 4.7 |
-
-Of the 4 actionable cases (excluding life-stage exits), 3 cite pay or pay-implicating
-reasons. **The Lynch row is the single most decision-useful row in the analysis.**
-Engagement 5.0 (maximum), top performer, 4 years of tenure, salary in the bottom
-quartile of Production — Lynch wasn't disengaged or unhappy. She just got a
-better offer. The only difference between her and Winthrop (same engagement,
-$23K higher salary, stayed until retirement) was pay.
-
 *Caveat: Position-mix within Production is not fully controlled in the
 tenure-based comparisons. Position-level analysis would refine the magnitudes
 without changing the direction.*
@@ -160,7 +137,7 @@ The single highest-leverage intervention indicated by the analysis is a
 market-rate salary review for Production roles, particularly at 3+ years of
 tenure. This would directly address the 11 explicit "more money" voluntary
 exits, likely absorb a portion of the 17 "Another position" exits, and remove
-the structural mechanism behind the Lynch-type regrettable departures.
+the structural mechanism behind regrettable top-performer departures.
 
 *Grounded in Findings 2 and 3.*
 

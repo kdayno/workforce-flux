@@ -1,9 +1,8 @@
 -- Phase 5 — exit reasons
 --
--- Turns term_reason into a "why do people leave?" narrative. Four cuts:
--- company-wide, Production vs non-Production, by tenure band, and a
--- named case study of the 6 lifetime Exceeds-in-Production voluntary
--- departures. Underpins Findings #6, #7, and #8.
+-- Turns term_reason into a "why do people leave?" narrative. Three cuts:
+-- company-wide, Production vs non-Production, and by tenure band.
+-- Underpins Findings #6 and #7.
 
 -- Q1: Voluntary exit reasons, company-wide, with proportional shares.
 -- Reason classes used downstream:
@@ -49,22 +48,3 @@ FROM dim_employee
 WHERE termination_type = 'Voluntary'
 GROUP BY term_reason
 ORDER BY total DESC;
-
-
--- Q4: Named case study -- the 6 Production Exceeds (top performers) who
--- voluntarily left. Six rows, no statistics -- pure narrative artefact.
--- Underpins Finding #8: 3 of 4 actionable departures are pay-driven;
--- Lindsay Lynch (engagement 5.0, salary $47,434) is the showcase row.
-SELECT
-    employee_name,
-    term_reason,
-    ROUND(tenure_years, 1) AS tenure_at_exit,
-    hire_year,
-    date_of_termination,
-    salary,
-    engagement_survey_score
-FROM dim_employee
-WHERE department = 'Production'
-  AND performance_score = 'Exceeds'
-  AND termination_type = 'Voluntary'
-ORDER BY date_of_termination;
