@@ -21,7 +21,7 @@
 | # | Finding | Headline number |
 |---|---|---|
 | 1 | Hiring freeze, not attrition crisis | Annual turnover 3.6–9.9% (low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm)) |
-| 2 | Voluntary attrition concentrated in Production | 86% of voluntary exits from 67% of headcount |
+| 2 | Voluntary attrition concentrated in Production department | 86% of voluntary exits from 67% of headcount |
 | 3 | Production has a structural pay-competitiveness gap | Stayers earn 12.7% more than leavers at 5–10 yrs tenure |
 | 4 | Pay equity is healthy; raw gap is composition | 2.1% raw gap → ~0% within position |
 
@@ -36,7 +36,7 @@
 - Annual turnover **3.6–9.9%** — low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm)
 - Mechanism: hiring stopped, not terminations spiked
 
-### 2. Voluntary attrition is concentrated in Production
+### 2. Voluntary attrition concentrated in Production department
 
 - **86% of lifetime voluntary departures** (74 of 86) came from Production, which is 67% of headcount
 - Production's lifetime voluntary rate (35%) is **3–4× higher** than IT/IS (10%) or Sales (10%)

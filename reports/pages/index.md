@@ -38,9 +38,9 @@ from workforce_flux.dim_employee
 ---
 
 ## The big picture
-> The company is **[shrinking by design](#1-a-workforce-shrinking-by-design)**, through a **hiring freeze** rather than an attrition crisis. **Voluntary departures** are concentrated almost entirely in the **[Production department](#2-voluntary-attrition-concentrated-within-production-department)**, which has a structural **[pay-competitiveness gap](#3-pay-inverts-with-tenure-inside-production-department)**. **Pay equity** within roles is **healthy**; the small raw gap is a composition effect.
+> The company is shrinking through a **[hiring freeze](#1-hiring-freeze-not-attrition-crisis)** rather than an attrition crisis. **Voluntary departures** are concentrated almost entirely in the **[Production department](#2-voluntary-attrition-concentrated-in-production-department)**, which has a structural **[pay-competitiveness gap](#3-pay-inverts-with-tenure-inside-production-department)**. **Pay equity** within roles is **healthy**; the small raw gap is a composition effect.
 
-### 1. A workforce shrinking by design
+### 1. Hiring freeze, not attrition crisis
 
 Headcount peaked in mid-2015 and has trended down since. The driver is reduced hiring, not a spike in terminations.
 
@@ -60,7 +60,7 @@ order by month_start
 
 *[→ See more details about Finding 1](/decline)*
 
-### 2. Voluntary attrition concentrated within Production department
+### 2. Voluntary attrition concentrated in Production department
 
 Production is 67% of headcount but accounts for 86% of lifetime voluntary departures.
 
@@ -120,7 +120,7 @@ order by
 | # | Finding | Headline number |
 |---|---|---|
 | 1 | [Hiring freeze, not attrition crisis](/decline) | Annual turnover 3.6–9.9% (low by [BLS 2019 labour-turnover data](https://www.bls.gov/opub/mlr/2020/article/job-openings-hires-and-quits-set-record-highs-in-2019.htm)) |
-| 2 | [Voluntary attrition concentrated in Production](/production) | 86% of voluntary exits from 67% of headcount |
+| 2 | [Voluntary attrition concentrated in Production department](/production) | 86% of voluntary exits from 67% of headcount |
 | 3 | [Production has a structural pay-competitiveness gap](/pay-gap) | Stayers earn 12.7% more than leavers at 5–10 yrs tenure |
 | 4 | [Pay equity is healthy; raw gap is composition](/pay-equity) | 2.1% raw gap → ~0% within position |
 
@@ -131,5 +131,5 @@ The single highest-leverage intervention indicated by the analysis is a **market
 Three supporting interventions:
 
 - **Replace the engagement survey** as a Production retention forecaster. The current instrument fails to detect the dissatisfaction driving exits.
-- **Build a merit-pay premium for Production**, since top performers currently earn only marginally more than median performers.
+- **Build a merit-pay premium for Production**, since performers who are "Exceeding Expectations" currently earn only marginally more than those that "Fully Meet Expectations".
 - **Investigate the Production Manager pay structure** for tenure-based equity concerns (small sample, worth a deliberate look).

@@ -1,6 +1,6 @@
 ---
 title: 3. Production has a structural pay-competitiveness gap
-description: Pay inverts with tenure, no merit premium, and stayers earn 12.7% more than leavers
+description: Pay inverts with tenure, decoupled from performance, and stayers earn 12.7% more than leavers
 sidebar_position: 3
 ---
 

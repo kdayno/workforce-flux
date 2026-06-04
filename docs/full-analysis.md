@@ -27,7 +27,7 @@ Company X is not bleeding people. It has stopped hiring.
 *Caveat: The trailing-12-month turnover rate combines voluntary and involuntary
 terminations. Voluntary-only rates sit at roughly ¾ of the reported values.*
 
-## 2. Voluntary attrition is concentrated in Production
+## 2. Voluntary attrition concentrated in Production department
 
 Of 86 lifetime voluntary departures, **74 (86%) came from Production** — which
 makes up 67% of all employees ever hired. Production's lifetime voluntary rate
@@ -152,11 +152,12 @@ the structural mechanism behind regrettable top-performer departures.
   known false negative for the dissatisfaction that actually drives Production
   exits. A diagnostic scoped to Production-specific conditions (hours, role,
   supervisor) would surface what the survey misses. *Grounded in Finding 2.*
-- **Build a merit-pay premium for Production.** Top performers (Exceeds) earn
-  only ~2% more than median performers at the median — well below the level
-  needed to retain high performers against external offers. A meaningful
-  premium would compound with the market-rate adjustment to specifically
-  address regrettable attrition. *Grounded in Finding 3.*
+- **Build a merit-pay premium for Production.** Performers who are "Exceeding
+  Expectations" earn only a ~2% premium over those that "Fully Meet
+  Expectations" — well below the level needed to retain high performers
+  against external offers. A meaningful premium would compound with the
+  market-rate adjustment to specifically address regrettable attrition.
+  *Grounded in Finding 3.*
 - **Investigate the Production Manager 5–10 year pay cell from Finding 4.**
   Men in this cell earn 19% more than women on n=3 vs 4 — too small to call
   a finding, large enough to warrant a deliberate look. A targeted pull of
