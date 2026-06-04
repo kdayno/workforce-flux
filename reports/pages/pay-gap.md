@@ -8,8 +8,9 @@ Three reinforcing patterns explain why Production loses people.
 
 ## Pay inverts with tenure
 
-Newer hires earn more than veterans — consistent with hire-date-anchored
-salaries that have not tracked the market rate Company X must currently offer.
+Long-tenured employees **earn less** than newer hires because their pay is anchored
+to what Company X offered them years ago, plus modest annual raises — and those
+raises haven't kept up with how much the external market now pays for the same role.
 
 ```sql pay_by_tenure
 select
@@ -40,9 +41,9 @@ order by
     labels=true
 />
 
-## No merit-pay structure
+## Pay and performance are essentially decoupled
 
-Top performers earn only ~2% more than median performers at the median.
+Performers who are "Exceeding Expectations" earn a median of $60,724 vs. $59,365 for those that "Fully Meet Expectations" — only a **~2% premium**. Interestingly, those who "Need Improvement" earn a median of $60,270 — essentially the same as top performers, and ***more*** than those who "Fully Meet Expectations".
 
 ```sql pay_by_perf
 select
@@ -72,9 +73,58 @@ order by
     labels=true
 />
 
+```sql perf_distribution
+select
+    performance_score,
+    count(*) as employees,
+    count(*) * 1.0 / sum(count(*)) over () as pct_of_production
+from workforce_flux.dim_employee
+where department = 'Production'
+group by performance_score
+order by
+    case performance_score
+        when 'Exceeds'           then 1
+        when 'Fully Meets'       then 2
+        when 'Needs Improvement' then 3
+        when 'PIP'               then 4
+    end
+```
+
+<ECharts
+    config={{
+        title: {
+            text: 'Production performance distribution',
+            left: 'left',
+            top: 0,
+            textStyle: { fontSize: 14, fontWeight: 'bold' }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: '{b}: {c} ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+            right: 10,
+            top: 'middle'
+        },
+        series: [{
+            type: 'pie',
+            radius: '60%',
+            center: ['40%', '55%'],
+            data: perf_distribution.map(d => ({
+                name: d.performance_score,
+                value: d.employees
+            })),
+            label: {
+                formatter: (p) => `${p.name}: ${Math.round(p.percent)}%`
+            }
+        }]
+    }}
+/>
+
 ## Stayers earn more than leavers at the same tenure
 
-Production employees who stay earn 4% more than employees who voluntary leave at 2–5 years of tenure, and **12.7% more** at 5–10 years (n=72 stayers vs 20 leavers).
+Production employees who stay earn **4%** more than employees who voluntary leave at 2–5 years of tenure, and **12.7% more** at 5–10 years (n=72 stayers vs 20 leavers).
 
 ```sql stayers_vs_leavers
 select

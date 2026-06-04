@@ -46,7 +46,7 @@
 ### 3. Production has a structural pay-competitiveness gap
 
 - **Pay inverts with tenure** — Production median by band: ~$64K (<2 yrs) → $59K (2–10 yrs) → $56K (10+ yrs)
-- **No merit-pay structure** — top performers earn only ~2% more than median performers at the median
+- **Pay and performance are essentially decoupled** — performers who are "Exceeding Expectations" earn a median of ~$61K vs. ~$59K for those that "Fully Meet Expectations" (~2% premium); interestingly, those who "Need Improvement" earn ~$60K — *more* than those who "Fully Meet Expectations"
 - **Stayers earn more than leavers at the same tenure** — 4% gap at 2–5 yrs, **12.7% gap** at 5–10 yrs (n=72 stayers vs 20 leavers)
 
 ### 4. Pay equity is healthy; the raw gap is composition

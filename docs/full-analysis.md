@@ -73,10 +73,13 @@ rate Company X must currently offer:
 | 5–10 years | 97 | $59,144 |
 | 10+ years | 2 | $55,996 |
 
-### No meaningful merit-pay structure
+### Pay and performance are essentially decoupled
 
-Within Production, top performers (Exceeds) earn ~2% more than median performers
-at the median. Performance is not financially rewarded:
+Within Production, performers who are "Exceeding Expectations" earn a median of
+$60,724 vs. $59,365 for those that "Fully Meet Expectations" — only a ~2% premium.
+Interestingly, those who "Need Improvement" earn a median of $60,270 — essentially
+the same as top performers, and *more* than those who "Fully Meet Expectations".
+Performance is not financially rewarded:
 
 | Performance | N | Median | Premium vs Fully Meets |
 |---|---|---|---|
