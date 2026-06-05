@@ -1,4 +1,4 @@
-# Workforce Flux — Full Analysis
+# Workforce Flux: Full Analysis
 
 This document extends the Key Findings summary in [`README.md`](../README.md) with
 the supporting numbers, per-finding caveats, and
@@ -29,7 +29,7 @@ terminations. Voluntary-only rates sit at roughly ¾ of the reported values.*
 
 ## 2. Voluntary attrition concentrated in Production department
 
-Of 86 lifetime voluntary departures, **74 (86%) came from Production** — which
+Of 86 lifetime voluntary departures, **74 (86%) came from Production**, which
 makes up 67% of all employees ever hired. Production's lifetime voluntary rate
 (35%) is 3–4× higher than the next-largest departments (IT/IS 10%, Sales 10%).
 
@@ -47,11 +47,11 @@ The asymmetry is sharper at the reason level: **every "unhappy" and every
 of 11 respectively).
 
 The engagement survey does not detect this. Production's average engagement (4.13)
-is mid-pack — *higher* than Sales (3.82), which has none of these patterns. The
+is mid-pack, *higher* than Sales (3.82), which has none of these patterns. The
 survey instrument is a false-negative indicator for the dissatisfaction that
 actually drives Production exits.
 
-*Caveat: Non-Production has only 12 lifetime voluntary exits in total — the
+*Caveat: Non-Production has only 12 lifetime voluntary exits in total. The
 "100% from Production" claim for specific reasons is directionally clear but
 statistically modest.*
 
@@ -61,7 +61,7 @@ Three reinforcing patterns explain why Production loses people.
 
 ### Pay inverts with tenure
 
-Median Production salary by tenure band — newer hires earn *more* than veterans,
+Median Production salary by tenure band. Newer hires earn *more* than veterans,
 consistent with hire-date-anchored salaries that have not tracked the market
 rate Company X must currently offer:
 
@@ -76,8 +76,8 @@ rate Company X must currently offer:
 ### Pay and performance are essentially decoupled
 
 Within Production, performers who are "Exceeding Expectations" earn a median of
-$60,724 vs. $59,365 for those that "Fully Meet Expectations" — only a ~2% premium.
-Interestingly, those who "Need Improvement" earn a median of $60,270 — essentially
+$60,724 vs. $59,365 for those that "Fully Meet Expectations", only a ~2% premium.
+Interestingly, those who "Need Improvement" earn a median of $60,270, essentially
 the same as top performers, and *more* than those who "Fully Meet Expectations".
 Performance is not financially rewarded:
 
@@ -91,7 +91,7 @@ Performance is not financially rewarded:
 ### Stayers earn more than leavers at the same tenure
 
 Production stayers earn 4% more than voluntary leavers at 2–5 years tenure,
-and **12.7% more** at 5–10 years tenure (n=72 stayers vs n=20 leavers —
+and **12.7% more** at 5–10 years tenure (n=72 stayers vs n=20 leavers,
 reasonable samples):
 
 | Tenure band | Status | N | Median |
@@ -107,7 +107,7 @@ without changing the direction.*
 
 ## 4. Pay equity is healthy; the raw gap is composition
 
-The raw company-wide median pay gap is **2.1% in men's favour** — already small
+The raw company-wide median pay gap is **2.1% in men's favour**, already small
 by external benchmarks (typically 15–20% raw). Within Production, controlled by
 position and tenure band, **women earn the same as or slightly more than men**
 at Production Technician I and II levels, where 86% of the Production workforce
@@ -124,17 +124,17 @@ sits:
 The 2.1% raw gap arises from representation: men are slightly over-represented
 in Production Manager (57% of 14) and hold the single Director of Operations
 role ($170,500). The right framing splits the question into *equity within role*
-(healthy) and *representation across roles* (a small skew worth monitoring) —
-reporting the raw gap alone would mislead in both directions.
+(healthy) and *representation across roles* (a small skew worth monitoring).
+Reporting the raw gap alone would mislead in both directions.
 
 *Caveat: Performance is not controlled in the within-position comparison;
 sample sizes shrink below interpretability when adding it. The Production
-Manager 5–10 yr cell shows a 19% premium for men but n=3 vs 4 — flag for
+Manager 5–10 yr cell shows a 19% premium for men but n=3 vs 4; flag for
 investigation, not a finding on its own.*
 
 ## Recommendations
 
-### Primary — market-rate salary review for Production
+### Primary: market-rate salary review for Production
 
 The single highest-leverage intervention indicated by the analysis is a
 market-rate salary review for Production roles, particularly at 3+ years of
@@ -148,19 +148,125 @@ the structural mechanism behind regrettable top-performer departures.
 
 - **Replace or augment the engagement survey as a Production retention
   forecaster.** Production employees who voluntarily cite "unhappy" do so
-  without first registering as low engagement — the current instrument is a
+  without first registering as low engagement. The current instrument is a
   known false negative for the dissatisfaction that actually drives Production
   exits. A diagnostic scoped to Production-specific conditions (hours, role,
   supervisor) would surface what the survey misses. *Grounded in Finding 2.*
 - **Build a merit-pay premium for Production.** Performers who are "Exceeding
   Expectations" earn only a ~2% premium over those that "Fully Meet
-  Expectations" — well below the level needed to retain high performers
+  Expectations", well below the level needed to retain high performers
   against external offers. A meaningful premium would compound with the
   market-rate adjustment to specifically address regrettable attrition.
   *Grounded in Finding 3.*
 - **Investigate the Production Manager 5–10 year pay cell from Finding 4.**
-  Men in this cell earn 19% more than women on n=3 vs 4 — too small to call
-  a finding, large enough to warrant a deliberate look. A targeted pull of
+  Men in this cell earn 19% more than women on n=3 vs 4, too small to call
+  a finding but large enough to warrant a deliberate look. A targeted pull of
   position changes, raise history, and starting salaries for these 7
   employees would either rule it in or out as a real gap. *Grounded in
   Finding 4.*
+
+---
+
+## Methodology: changes applied to the original dataset
+
+The raw Kaggle CSV is transformed in three stages. None of the original data is
+discarded silently; every change is listed here.
+
+### 1. Structural cleaning (`stg_employees`)
+
+- **Column renaming.** All columns are renamed from mixed-case (`EmpID`,
+  `DateofHire`, `PerfScoreID`) to consistent `snake_case` (`emp_id`,
+  `date_of_hire`, `performance_score_id`).
+- **Explicit type casting.** The file is read with every column as text
+  (`all_varchar = true`) and then cast deliberately: IDs/counts/salary → integers,
+  engagement score → double, date strings → real `DATE` types.
+- **Whitespace trimming.** Every text column is trimmed; the raw file contains
+  trailing spaces (e.g. `Production       `, `M `).
+- **Boolean flags.** `0`/`1` integer flags become real booleans:
+  `Termd` → `is_terminated`, `FromDiversityJobFairID` → `from_diversity_job_fair`.
+- **`HispanicLatino` normalisation.** The raw column mixes `Yes`/`yes`/`No`/`no`;
+  it is normalised to a boolean `is_hispanic_latino`.
+- **Redundant columns dropped.** Encoded-ID columns that merely duplicate a
+  descriptive text column are not carried forward: `MarriedID`, `MaritalStatusID`,
+  `GenderID`, `EmpStatusID`.
+
+### 2. Derived fields (`int_employees_enriched`)
+
+New columns that do **not** exist in the source are added:
+
+| New field | Derivation |
+|-----------|------------|
+| `age_years`, `age_band` | From `DOB` vs. the analysis anchor date |
+| `tenure_end_date` | Termination date, or the anchor date if still active |
+| `tenure_years`, `tenure_band` | Hire date → `tenure_end_date` |
+| `hire_year` | Year component of the hire date |
+| `salary_band` | Salary bucketed (`Under $50k` … `$100k+`) |
+| `termination_type` | `Voluntary` / `Involuntary`, inferred from `TermReason` |
+
+### 3. Time-series reconstruction (the structural change)
+
+The source is a **point-in-time snapshot**. It cannot answer "how many people
+did we have in March 2016?" or "what was turnover in 2017?". Because every row
+carries a hire date and (if applicable) a termination date, history can be
+*reconstructed*:
+
+- **`int_date_spine`** is a generated monthly calendar (no equivalent in the
+  source).
+- **`int_headcount_monthly`** cross-joins the date spine with employees,
+  producing an **employee-month grain**: for every month, exactly who was on
+  payroll. This table has far more rows than the 311-row source.
+- **`mart_headcount_monthly`** aggregates that into a monthly series: active
+  headcount, hires, terminations, net change, and a **rolling 12-month turnover
+  rate**.
+
+This converts a dataset that can only *describe the present* into one that can
+*measure change over time*.
+
+## Assumptions
+
+1. **Analysis anchor date = `2019-01-01`.** All "as of" calculations (age,
+   tenure, current headcount) are frozen to this date via the `analysis_date`
+   dbt var, because the dataset is a 2018–2019 snapshot. Using `current_date`
+   would make results drift on every run. Change the var to re-anchor.
+2. **Continuous employment.** The source records exactly one hire date and at
+   most one termination date per person. The headcount reconstruction therefore
+   assumes nobody was rehired, took a leave of absence, or had an employment
+   gap.
+3. **Voluntary vs. involuntary classification.** `termination_type` maps the
+   employer-initiated `TermReason` values (`performance`, `attendance`,
+   `gross misconduct`, `no-call, no-show`, `fatal attraction`, and
+   `learned that he is a gangster`) to **Involuntary**; every other reason
+   (e.g. `more money`, `career change`, `retiring`) is **Voluntary**. This is a
+   judgement call; the mapping lives in `int_employees_enriched.sql`. Note the
+   dataset contains a couple of joke `TermReason` values, classified above by
+   their literal meaning.
+4. **Date formats.** Hire/termination/review dates are parsed as `M/D/YYYY` and
+   date of birth as `M/D/YY`. Parsing uses `try_strptime`, which yields `NULL`
+   (rather than failing the run) on a format mismatch. After the first run,
+   check for unexpected `NULL` dates and adjust the formats in
+   `stg_employees.sql`.
+5. **Two-digit birth years** resolve via DuckDB's `%y` rule (69–99 → 1900s,
+   00–68 → 2000s), which is correct for an adult workforce.
+6. **Active = employed at month-end.** An employee counts as active in a month
+   if hired on/before that month's last day and not terminated as of that day.
+
+## Caveats & limitations
+
+1. **Single snapshot.** Every time-based metric is *reconstructed* from hire and
+   termination dates, not observed. It cannot reflect anything those two dates
+   do not capture.
+2. **Small sample (~311).** Fine-grained segmentation produces tiny cells where
+   a percentage is mostly noise. Always read counts next to rates, and be
+   cautious past one level of grouping.
+3. **Teaching dataset.** This is a well-known instructional dataset; some
+   relationships are weak or partly synthetic. Treat findings as method
+   practice, not real-world HR conclusions.
+4. **"Separation rate" ≠ "turnover rate".** `lifetime_separation_rate` in
+   `mart_attrition` / `mart_recruitment_effectiveness` is the share of *everyone
+   who has ever worked there* who has since left, cumulative across the
+   company's whole history, **not** an annual rate. For a proper annualised
+   turnover rate use `rolling_12m_turnover_rate` in `mart_headcount_monthly`.
+5. **Pay equity needs confounder control.** A raw salary comparison by gender or
+   race is misleading without first controlling for position, department, and
+   tenure (Simpson's paradox). This scaffold deliberately does not ship a naive
+   pay-gap mart.
