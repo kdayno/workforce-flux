@@ -1,5 +1,4 @@
 ---
-title: Workforce Flux
 description: People analytics on a Kaggle HR dataset
 ---
 
@@ -8,6 +7,8 @@ description: People analytics on a Kaggle HR dataset
 		color: inherit !important;
 	}
 </style>
+
+![Workforce Flux](/workforce-flux-header.png)
 
 A deep dive into Company X's headcount, attrition, and pay using an HR dataset. Observing workforce trends, drawing key insights, and making recommendations to leadership.
 
