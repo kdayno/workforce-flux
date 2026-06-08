@@ -129,8 +129,7 @@ order by
 
 The single highest-leverage intervention indicated by the analysis is a **market-rate salary review for Production roles at 3+ years of tenure**. This directly addresses the **[pay-competitiveness gap](#3-pay-inverts-with-tenure-inside-production-department)** that drives most voluntary attrition at Company X.
 
-Three supporting interventions:
+Two supporting interventions:
 
 - **Replace the engagement survey** as a Production retention forecaster. The current instrument fails to detect the dissatisfaction driving exits.
 - **Build a merit-pay premium for Production**, since performers who are "Exceeding Expectations" currently earn only marginally more than those that "Fully Meet Expectations".
-- **Investigate the Production Manager pay structure** for tenure-based equity concerns (small sample, worth a deliberate look).
