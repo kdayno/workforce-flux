@@ -158,12 +158,6 @@ the structural mechanism behind regrettable top-performer departures.
   against external offers. A meaningful premium would compound with the
   market-rate adjustment to specifically address regrettable attrition.
   *Grounded in Finding 3.*
-- **Investigate the Production Manager 5–10 year pay cell from Finding 4.**
-  Men in this cell earn 19% more than women on n=3 vs 4, too small to call
-  a finding but large enough to warrant a deliberate look. A targeted pull of
-  position changes, raise history, and starting salaries for these 7
-  employees would either rule it in or out as a real gap. *Grounded in
-  Finding 4.*
 
 ---
 
