@@ -1,6 +1,6 @@
 ![Workforce Flux Header Image](./docs/workforce-flux-header.png) 
 
-- An end-to-end people-analytics project: a raw Kaggle HR dataset transformed into decision-useful insight on headcount, attrition, and pay.
+- An end-to-end People Analytics project: a raw HR dataset (sourced from [Kaggle](#data-source)) transformed into decision-useful insight on headcount, attrition, and pay.
 - File-based analytics stack (DuckDB + dbt + Evidence), deployed as a static Vercel site.
 
 > 🔗 Live demo: [workforceflux.kdayno.com](https://workforceflux.kdayno.com)
