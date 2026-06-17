@@ -1,0 +1,76 @@
+version: 2
+
+exposures:
+  - name: dashboard_overview
+    label: "Workforce Overview"
+    type: dashboard
+    maturity: high
+    url: https://workforceflux.kdayno.com/
+    description: >
+      Landing page: peak and latest headcount, TTM turnover, voluntary
+      share of exits, and summary trend charts.
+    owner:
+      name: Kevin Dayno
+      email: kdayno@users.noreply.github.com
+    depends_on:
+      - ref('dim_employee')
+      - ref('mart_attrition')
+      - ref('mart_headcount_monthly')
+
+  - name: dashboard_decline_diagnosis
+    label: "Finding 1 — Hiring freeze, not attrition crisis"
+    type: dashboard
+    maturity: high
+    url: https://workforceflux.kdayno.com/decline
+    description: >
+      Headcount decline diagnosed as a hiring slowdown rather than an attrition
+      spike, with annual hires vs terminations and the TTM turnover rate.
+    owner:
+      name: Kevin Dayno
+      email: kdayno@users.noreply.github.com
+    depends_on:
+      - ref('dim_employee')
+      - ref('mart_headcount_monthly')
+
+  - name: dashboard_production_attrition
+    label: "Finding 2 — Voluntary attrition concentrated in Production"
+    type: dashboard
+    maturity: high
+    url: https://workforceflux.kdayno.com/production
+    description: >
+      Department-level voluntary attrition showing concentration in Production,
+      with engagement scores and voluntary exit reasons.
+    owner:
+      name: Kevin Dayno
+      email: kdayno@users.noreply.github.com
+    depends_on:
+      - ref('dim_employee')
+      - ref('mart_attrition')
+
+  - name: dashboard_pay_gap
+    label: "Finding 3 — Production pay-competitiveness gap"
+    type: dashboard
+    maturity: high
+    url: https://workforceflux.kdayno.com/pay-gap
+    description: >
+      Production salary by tenure and performance band, and the stayers-vs-leavers
+      salary comparison underpinning the pay-competitiveness finding.
+    owner:
+      name: Kevin Dayno
+      email: kdayno@users.noreply.github.com
+    depends_on:
+      - ref('dim_employee')
+
+  - name: dashboard_pay_equity
+    label: "Finding 4 — Pay equity is healthy"
+    type: dashboard
+    maturity: high
+    url: https://workforceflux.kdayno.com/pay-equity
+    description: >
+      Raw vs composition-controlled pay gap, demonstrating that the raw gap is
+      driven by role composition rather than unequal pay within roles.
+    owner:
+      name: Kevin Dayno
+      email: kdayno@users.noreply.github.com
+    depends_on:
+      - ref('dim_employee')
