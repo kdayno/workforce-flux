@@ -142,7 +142,8 @@ Layer materialisation: staging & intermediate are **views**, marts are **tables*
 
 - **Recruitment-source effectiveness as a fifth finding.** The
   `mart_recruitment_effectiveness` model exists but no narrative is built on
-  it. Which channels (Indeed, LinkedIn, referral, diversity job fair) produce
+  it — it is an intentional orphan mart (no dbt exposure points to it yet).
+  Which channels (Indeed, LinkedIn, referral, diversity job fair) produce
   stayers vs leavers, and at what cost-per-retained-hire?
 - **Tenure survival curve for voluntary exits.** A hazard curve by
   month-of-tenure, Production vs non-Production, would localise *when* in the
