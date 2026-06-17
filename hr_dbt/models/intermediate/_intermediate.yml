@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: int_employees_enriched
+    description: >
+      Staging employees plus derived analytical fields (age, tenure, banded
+      categories, voluntary/involuntary termination type). One row per employee.
+    data_tests:
+      - termination_after_hire:
+          arguments:
+            hire_column: date_of_hire
+            termination_column: date_of_termination
+    columns:
+      - name: emp_id
+        description: Unique employee identifier (primary key).
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_employees')
+                field: emp_id
+      - name: tenure_years
+        description: Whole years from hire to termination (or analysis date).
+        data_tests:
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 0
+      - name: termination_type
+        description: Voluntary/Involuntary classification; null while active.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Voluntary', 'Involuntary']
+              config:
+                severity: warn
+
+  - name: int_date_spine
+    description: >
+      Monthly calendar spine (one row per month) used to reconstruct the
+      headcount time series. Built with dbt_utils.date_spine.
+    columns:
+      - name: month_start
+        description: First day of the calendar month (grain of the spine).
+        data_tests:
+          - unique
+          - not_null
+
+  - name: int_headcount_monthly
+    description: >
+      Employee-month grain aggregated to an active headcount per month: an
+      employee is active in a month if hired on or before month-end and not yet
+      terminated as of month-end.
+    columns:
+      - name: month_start
+        description: First day of the calendar month (grain of the table).
+        data_tests:
+          - unique
+          - not_null
+      - name: active_headcount
+        description: Count of employees active as of the month-end.
+        data_tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 0
