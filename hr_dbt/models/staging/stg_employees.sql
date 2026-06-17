@@ -1,16 +1,10 @@
--- Staging: one cleaned, type-cast row per employee, built directly from the
--- raw Kaggle CSV. Column names are snake_cased, whitespace is trimmed, and
--- 0/1 flags are converted to booleans. No business logic lives here.
+-- Staging: one cleaned, type-cast row per employee, built from the committed
+-- `raw_hr_dataset` seed. Column names are snake_cased, whitespace is trimmed,
+-- and 0/1 flags are converted to booleans. No business logic lives here.
 
 with source as (
 
-    -- all_varchar = true forces every column to text so we can cast
-    -- deliberately below, rather than relying on CSV type auto-detection.
-    select *
-    from read_csv_auto(
-        '{{ var("raw_data_path") }}/HRDataset_v14.csv',
-        all_varchar = true
-    )
+    select * from {{ ref('raw_hr_dataset') }}
 
 ),
 

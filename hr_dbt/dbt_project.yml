@@ -22,9 +22,6 @@ vars:
   # using current_date -- otherwise results would drift on every run.
   analysis_date: '2019-01-01'
 
-  # Location of the raw Kaggle CSV, relative to where dbt is run (hr_dbt/).
-  raw_data_path: '../data/raw'
-
 models:
   hr_analytics:
     staging:

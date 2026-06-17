@@ -56,12 +56,9 @@ premium for Production) are detailed in [`docs/full-analysis.md#recommendations`
 by Dr. Rich Huebner & Dr. Carla Patalano (Kaggle). A single CSV,
 `HRDataset_v14.csv` (**~311 employees, 36 columns**), one row per employee.
 
-The raw file is **not committed** (see `.gitignore`). Download it from Kaggle
-(a free account is required) and place it at:
-
-```
-data/raw/HRDataset_v14.csv
-```
+A snapshot of this public dataset is committed to the repo as a dbt seed at
+`hr_dbt/seeds/raw_hr_dataset.csv`, so `dbt build` is fully reproducible with no
+manual download. `stg_employees` reads it via `ref('raw_hr_dataset')`.
 
 ## Project structure
 
@@ -72,7 +69,7 @@ workforce-flux/
 ├── requirements.txt
 ├── .gitignore
 ├── data/
-│   └── raw/                  # HRDataset_v14.csv goes here (not committed)
+│   └── raw/                  # local scratch for the source CSV (not committed)
 ├── docs/
 │   └── full-analysis.md           # Full per-finding analysis (tables, caveats)
 ├── eda/                      # Exploratory data analysis (SQL, run against hr.duckdb)
@@ -84,6 +81,7 @@ workforce-flux/
 │   ├── dbt_project.yml
 │   ├── profiles.yml
 │   ├── packages.yml
+│   ├── seeds/                # raw_hr_dataset.csv (committed source snapshot)
 │   └── models/
 │       ├── staging/
 │       │   ├── stg_employees.sql
@@ -113,14 +111,13 @@ source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 
-# 2. Download HRDataset_v14.csv from Kaggle into data/raw/
-
-# 3. Build the pipeline (run dbt from inside hr_dbt/)
+# 2. Build the pipeline (run dbt from inside hr_dbt/)
+#    The raw data ships as a committed dbt seed -- no download needed.
 cd hr_dbt
 dbt deps                              # installs dbt_utils
-dbt build --profiles-dir .            # runs models + tests
+dbt build --profiles-dir .            # loads seed + runs models + tests
 
-# 4. Run the Evidence reports locally
+# 3. Run the Evidence reports locally
 cd ../reports
 npm install
 npm run dev                           # opens http://localhost:3000
@@ -129,7 +126,7 @@ npm run dev                           # opens http://localhost:3000
 ## Pipeline / data model
 
 ```
-HRDataset_v14.csv
+raw_hr_dataset (seed) ............ committed source snapshot
 └─ stg_employees ................. clean + type-cast, 1 row per employee
    └─ int_employees_enriched ..... + derived fields (age, tenure, bands…)
       ├─ dim_employee ............ employee dimension

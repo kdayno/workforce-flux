@@ -1,0 +1,28 @@
+version: 2
+
+seeds:
+  - name: raw_hr_dataset
+    description: >
+      Raw Kaggle HRDataset_v14 snapshot, committed to the repo so `dbt build`
+      is hermetic and reproducible for anyone who clones it. Original column
+      names are preserved here; snake_casing, trimming and type-casting happen
+      downstream in `stg_employees`.
+    config:
+      # Force deliberate typing at the ingestion boundary. Dates stay varchar
+      # because the raw file mixes M/D/YYYY and M/D/YY -- stg_employees owns
+      # that parsing via try_strptime.
+      column_types:
+        EmpID: integer
+        Salary: integer
+        # Zip must stay text to preserve leading zeros (e.g. '01960').
+        Zip: varchar
+        DateofHire: varchar
+        DateofTermination: varchar
+        DOB: varchar
+        LastPerformanceReview_Date: varchar
+    columns:
+      - name: EmpID
+        description: Primary key from the source system (one row per employee).
+        data_tests:
+          - unique
+          - not_null
