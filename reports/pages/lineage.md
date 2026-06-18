@@ -5,11 +5,11 @@ sidebar_position: 5
 ---
 
 <iframe
-  src='https://docs.workforceflux.kdayno.com'
+  src='https://docs.workforceflux.kdayno.com/#!/overview?g_v=1'
   title='dbt documentation site'
   width='100%'
-  height='720'
-  style='border: 1px solid var(--grey-300); border-radius: 8px;'
+  height='820'
+  style='border: 1px solid var(--grey-300); border-radius: 8px; margin-bottom: 1.5rem;'
   loading='lazy'>
 </iframe>
 
@@ -26,4 +26,4 @@ What you'll find there:
 - **Tests** — the 40+ data tests (not-null/unique/relationships, range checks,
   and custom business-rule tests) guarding each layer.
 
-<BigLink url='https://docs.workforceflux.kdayno.com'>Open the dbt docs site →</BigLink>
+<BigLink url='https://docs.workforceflux.kdayno.com/#!/overview?g_v=1'>Open the dbt docs site →</BigLink>
