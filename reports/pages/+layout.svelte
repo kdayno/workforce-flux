@@ -5,6 +5,11 @@
 	export let data;
 </script>
 
-<EvidenceDefaultLayout {data} homePageName="Overview" hideBreadcrumbs={true}>
+<EvidenceDefaultLayout
+	{data}
+	homePageName="Overview"
+	hideBreadcrumbs={true}
+	githubRepo="https://github.com/kdayno/workforce-flux"
+>
 	<slot slot="content" />
 </EvidenceDefaultLayout>

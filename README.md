@@ -4,6 +4,7 @@
 - File-based analytics stack (DuckDB + dbt + Evidence), deployed as a static Vercel site.
 
 > 🔗 Live demo: [workforceflux.kdayno.com](https://workforceflux.kdayno.com)
+> &nbsp;·&nbsp; 📊 dbt docs / lineage: [docs.workforceflux.kdayno.com](https://docs.workforceflux.kdayno.com)
 
 ## Objectives
 
@@ -97,6 +98,7 @@ workforce-flux/
 │           ├── mart_recruitment_effectiveness.sql
 │           └── _marts.yml
 ├── reports/                  # Evidence reports (live at workforceflux.kdayno.com)
+├── docs_site/                # static dbt docs site (deployed to docs.workforceflux.kdayno.com)
 └── hr.duckdb                 # built by dbt; committed for Vercel
 ```
 
@@ -137,6 +139,12 @@ raw_hr_dataset (seed) ............ committed source snapshot
 ```
 
 Layer materialisation: staging & intermediate are **views**, marts are **tables**.
+
+The dbt documentation site (lineage graph, models, tests, exposures) is
+regenerated with `make docs` (runs `dbt docs generate --static`, copies the
+self-contained HTML to `docs_site/index.html`, and strips the local absolute
+path), then deployed as a static Vercel project at
+[docs.workforceflux.kdayno.com](https://docs.workforceflux.kdayno.com).
 
 ## Next steps
 
